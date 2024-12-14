@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .login-container input, .login-container select, .login-container button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .login-container button {
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Inicio de Sesión</h2>
+        <form action="auth.php" method="POST">
+            <!-- Campo de Usuario -->
+            <input type="text" name="usuario" placeholder="Usuario" required>
+            
+            <!-- Campo de Contraseña -->
+            <input type="password" name="contraseña" placeholder="Contraseña" required>
+            
+            <!-- Selección de Rol -->
+            <select name="rol" required>
+                <option value="" disabled selected>Selecciona tu rol</option>
+                <option value="admin">Administrador</option>
+                <option value="usuario">Usuario</option>
+                <option value="invitado">Invitado</option>
+            </select>
+            
+            <!-- Botón de Ingresar -->
+            <button type="submit">Ingresar</button>
+        </form>
+    </div>
+</body>
+</html>

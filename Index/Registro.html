@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: rgb(191, 196, 197);
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<form action="../public/registro.php">
+  <div class="container">
+    <h1>REGISTRO</h1>
+    <p>TUS BASES DE DATOS A UN CLICK</p>
+    <hr>
+
+    <label for="email"><b>Registro de  Usuario</b></label>
+    <input type="text" placeholder="Ingresa tu Nombre y Apellido" name="usuario" id="usuario" required>
+
+    <label for="psw"><b>CONTRASEÑA</b></label>
+    <input type="password" placeholder="Ingresa tu Contraseña" name="psw" id="psw" required>
+
+    <label for="psw-repeat"><b>Selecciona tu rol</b></label>
+    <input type="password" placeholder="Administrador" name="rol" id="rol" required>
+    <hr>
+    <p>Acepto Terminos y Condiciones <a href="#"> </a> <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
+      <label class="form-check-label" for="check1"></label></p>
+
+    <button type="submit" class="registerbtn">Registrar</button>
+  </div>
+  
+  <div class="container signin">
+    <p>Ya tienes una cuenta? <a href="#">Ingresar </a></p>
+  </div>
+</form>
+
+</body>
+</html>
